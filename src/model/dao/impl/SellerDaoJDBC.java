@@ -42,7 +42,6 @@ public class SellerDaoJDBC implements SellerDao{
 			ps.setDouble(4, seller.getBaseSalary());
 			ps.setInt(5, seller.getDepartment().getId());
 			
-			
 			int rowsAffected = ps.executeUpdate();
 			
 			if (rowsAffected > 0) {
@@ -164,7 +163,7 @@ public class SellerDaoJDBC implements SellerDao{
 	}
 
 	@Override
-	public List<Seller> findyAll() {
+	public List<Seller> findAll() {
 		PreparedStatement ps = null;
 		ResultSet rs = null;
 		
@@ -248,5 +247,4 @@ public class SellerDaoJDBC implements SellerDao{
 			DB.closeResultSet(rs);
 		}
 	}
-
 }
